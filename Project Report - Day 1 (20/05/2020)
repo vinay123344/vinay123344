@@ -1,0 +1,30 @@
+Project Report and Documentation
+Name : Abhishek Bhemisetty
+Internship Project : Predicting Life Expectancy using Machine Learning -  SB52110
+
+Day 1 ( 20-05-2020) : 
+
+TSK 35851 : Project Scope, Schedule, Team and Delivarables 
+
+Project Summary : To develop a machine learning model that predicts life expectancy
+Project Requirements : Machine Learning, Python, IBM Cloud account
+Functional Requirements : Supervised Learning, Data
+Technical Requirements : Computer with a internet connection
+Software Requirements : Access to IBM Cloud, Github, Jupyter notebook
+Project Deliverables : A web app that predicts the life expectancy of a person, based on the data entered.
+Project Team : Abhishek Bhemisetty
+Project Schedule :    2 tasks per day
+
+
+TSK 35852 : Setup the development Environment
+Created a github account and collabrated with the smartbridge repository.
+Created a slack account and joined the slack work space created by smart bridge.
+Accessed the zoho writer platform by the password provided in smartinternz platform.
+
+TSK 35853 : Create IBM Cloud Account
+Created a IBM Cloud using professional email id. And created a node RED app
+
+TSK 35854 : Create a node red account starter application
+
+Created a node red application using ibm account
+Node red starter app url : https://node-red-ixudm.mybluemix.net
