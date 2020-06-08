@@ -2,4 +2,4 @@
 Predicting Life Expectancy using Machine Learning
 
 This project deals with predicting the life expectancy of a person.
-The file project_code contains the dataset, machine learning model and node red ML flow 
+The file project_code contains the project description along with dataset and its description, machine learning jupyter notebook and node red ML flow
