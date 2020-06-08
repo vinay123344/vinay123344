@@ -1,0 +1,511 @@
+[
+    {
+        "id": "aee48a74.f0d118",
+        "type": "tab",
+        "label": "Machine Learning",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1dabe633.57b6fa",
+        "type": "wml",
+        "z": "aee48a74.f0d118",
+        "name": "Service Instance Details",
+        "connection": "6a8fe181.5fb378",
+        "wml-mode": "instanceDetails",
+        "model": "2bed8bdf-9fdf-4649-8544-20ee1b99e227",
+        "deployment": "a05e78cb-00d4-4603-b0ad-788bd071c5d8",
+        "modelhidden": "2bed8bdf-9fdf-4649-8544-20ee1b99e227",
+        "deploymenthidden": "",
+        "x": 430,
+        "y": 100,
+        "wires": [
+            [
+                "77194fff.93c5"
+            ]
+        ]
+    },
+    {
+        "id": "73706978.4b4d98",
+        "type": "inject",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 215,
+        "y": 100,
+        "wires": [
+            [
+                "1dabe633.57b6fa"
+            ]
+        ]
+    },
+    {
+        "id": "4df4416f.8fa8a8",
+        "type": "debug",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1012,
+        "y": 390,
+        "wires": []
+    },
+    {
+        "id": "94094fc3.4a0438",
+        "type": "inject",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 215,
+        "y": 190,
+        "wires": [
+            [
+                "7e2d1dd4.7c9404"
+            ]
+        ]
+    },
+    {
+        "id": "7e2d1dd4.7c9404",
+        "type": "wml",
+        "z": "aee48a74.f0d118",
+        "name": "List Published Models",
+        "connection": "6a8fe181.5fb378",
+        "wml-mode": "listModelsV4",
+        "model": "2c70ea92-c8bd-4b11-8757-c99906d919be",
+        "deployment": "b5c05fd5-f210-47f2-a358-27d6683e8ed4",
+        "modelhidden": "",
+        "deploymenthidden": "",
+        "x": 427,
+        "y": 190,
+        "wires": [
+            [
+                "362c9a84.9818de"
+            ]
+        ]
+    },
+    {
+        "id": "d654c09.ad405c",
+        "type": "inject",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 84,
+        "y": 514,
+        "wires": [
+            [
+                "eeecb149.d22378"
+            ]
+        ]
+    },
+    {
+        "id": "770872fb.d393f4",
+        "type": "wml",
+        "z": "aee48a74.f0d118",
+        "name": "Run Prediction",
+        "connection": "6a8fe181.5fb378",
+        "wml-mode": "runPrediction",
+        "model": "2c70ea92-c8bd-4b11-8757-c99906d919be",
+        "deployment": "b5c05fd5-f210-47f2-a358-27d6683e8ed4",
+        "modelhidden": "",
+        "deploymenthidden": "",
+        "x": 609,
+        "y": 518,
+        "wires": [
+            [
+                "bffaa430.ac7dc8"
+            ]
+        ]
+    },
+    {
+        "id": "6e90883f.1a9bf8",
+        "type": "link in",
+        "z": "aee48a74.f0d118",
+        "name": "wml out",
+        "links": [
+            "77194fff.93c5",
+            "362c9a84.9818de",
+            "bffaa430.ac7dc8",
+            "583184c6.df4aa4",
+            "517dd530.8b08e4",
+            "f8ea5dda.4c3e8",
+            "c87091fe.a11b38",
+            "d7673320.70db5",
+            "9d4ce2c4.c3149",
+            "672b3213.3d79bc"
+        ],
+        "x": 857,
+        "y": 389,
+        "wires": [
+            [
+                "4df4416f.8fa8a8"
+            ]
+        ]
+    },
+    {
+        "id": "77194fff.93c5",
+        "type": "link out",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "links": [
+            "6e90883f.1a9bf8"
+        ],
+        "x": 593,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "362c9a84.9818de",
+        "type": "link out",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "links": [
+            "6e90883f.1a9bf8"
+        ],
+        "x": 595,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "bffaa430.ac7dc8",
+        "type": "link out",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "links": [
+            "6e90883f.1a9bf8"
+        ],
+        "x": 732,
+        "y": 518,
+        "wires": []
+    },
+    {
+        "id": "c8dad13e.4f4b88",
+        "type": "comment",
+        "z": "aee48a74.f0d118",
+        "name": "Instance Method",
+        "info": "",
+        "x": 209,
+        "y": 62,
+        "wires": []
+    },
+    {
+        "id": "2098cc24.dfa3a4",
+        "type": "comment",
+        "z": "aee48a74.f0d118",
+        "name": "Published Model Methods",
+        "info": "",
+        "x": 240,
+        "y": 148,
+        "wires": []
+    },
+    {
+        "id": "f8357fb6.6d4f88",
+        "type": "inject",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 217,
+        "y": 226,
+        "wires": [
+            [
+                "750619a8.065ed"
+            ]
+        ]
+    },
+    {
+        "id": "750619a8.065ed",
+        "type": "wml",
+        "z": "aee48a74.f0d118",
+        "name": "Get Model Details",
+        "connection": "6a8fe181.5fb378",
+        "wml-mode": "getModelDetailsV4",
+        "model": "2c70ea92-c8bd-4b11-8757-c99906d919be",
+        "deployment": "b5c05fd5-f210-47f2-a358-27d6683e8ed4",
+        "modelhidden": "2c70ea92-c8bd-4b11-8757-c99906d919be",
+        "deploymenthidden": "",
+        "x": 416,
+        "y": 226,
+        "wires": [
+            [
+                "583184c6.df4aa4"
+            ]
+        ]
+    },
+    {
+        "id": "583184c6.df4aa4",
+        "type": "link out",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "links": [
+            "6e90883f.1a9bf8"
+        ],
+        "x": 601,
+        "y": 226,
+        "wires": []
+    },
+    {
+        "id": "dfdbced8.f43bd",
+        "type": "inject",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 220,
+        "y": 260,
+        "wires": [
+            [
+                "e3ee7e54.be613"
+            ]
+        ]
+    },
+    {
+        "id": "e3ee7e54.be613",
+        "type": "wml",
+        "z": "aee48a74.f0d118",
+        "name": "List Model Metrics",
+        "connection": "6a8fe181.5fb378",
+        "wml-mode": "listModelMetrics",
+        "model": "2bed8bdf-9fdf-4649-8544-20ee1b99e227",
+        "deployment": "a05e78cb-00d4-4603-b0ad-788bd071c5d8",
+        "modelhidden": "",
+        "deploymenthidden": "",
+        "x": 415,
+        "y": 263,
+        "wires": [
+            [
+                "517dd530.8b08e4"
+            ]
+        ]
+    },
+    {
+        "id": "517dd530.8b08e4",
+        "type": "link out",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "links": [
+            "6e90883f.1a9bf8"
+        ],
+        "x": 600,
+        "y": 263,
+        "wires": []
+    },
+    {
+        "id": "2448f045.8107",
+        "type": "inject",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 217,
+        "y": 299,
+        "wires": [
+            [
+                "69861fb0.bd3d3"
+            ]
+        ]
+    },
+    {
+        "id": "69861fb0.bd3d3",
+        "type": "wml",
+        "z": "aee48a74.f0d118",
+        "name": "List Model Iterations",
+        "connection": "6a8fe181.5fb378",
+        "wml-mode": "listLearningIterations",
+        "model": "d8308d26-e143-41f3-a44c-7808a890e7bb",
+        "x": 423,
+        "y": 299,
+        "wires": [
+            [
+                "f8ea5dda.4c3e8"
+            ]
+        ]
+    },
+    {
+        "id": "f8ea5dda.4c3e8",
+        "type": "link out",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "links": [
+            "6e90883f.1a9bf8"
+        ],
+        "x": 600,
+        "y": 299,
+        "wires": []
+    },
+    {
+        "id": "b4e5b17f.1c0c08",
+        "type": "comment",
+        "z": "aee48a74.f0d118",
+        "name": "Model Deployment Methods",
+        "info": "",
+        "x": 252,
+        "y": 344,
+        "wires": []
+    },
+    {
+        "id": "5cd9b97e.8a92c",
+        "type": "wml",
+        "z": "aee48a74.f0d118",
+        "name": "List Model Deployments",
+        "connection": "6a8fe181.5fb378",
+        "wml-mode": "listModelsV4",
+        "model": "2bed8bdf-9fdf-4649-8544-20ee1b99e227",
+        "deployment": "a05e78cb-00d4-4603-b0ad-788bd071c5d8",
+        "modelhidden": "2bed8bdf-9fdf-4649-8544-20ee1b99e227",
+        "deploymenthidden": "",
+        "x": 436,
+        "y": 387,
+        "wires": [
+            [
+                "c87091fe.a11b38"
+            ]
+        ]
+    },
+    {
+        "id": "e684f18f.0d93b8",
+        "type": "inject",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 217,
+        "y": 387,
+        "wires": [
+            [
+                "5cd9b97e.8a92c"
+            ]
+        ]
+    },
+    {
+        "id": "c87091fe.a11b38",
+        "type": "link out",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "links": [
+            "6e90883f.1a9bf8"
+        ],
+        "x": 604,
+        "y": 387,
+        "wires": []
+    },
+    {
+        "id": "a8dbf941.37ed5",
+        "type": "inject",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 217,
+        "y": 426,
+        "wires": [
+            [
+                "df3dc8fe.c90ad"
+            ]
+        ]
+    },
+    {
+        "id": "df3dc8fe.c90ad",
+        "type": "wml",
+        "z": "aee48a74.f0d118",
+        "name": "Get Deployment Details",
+        "connection": "6a8fe181.5fb378",
+        "wml-mode": "getDeploymentDetailsV4",
+        "model": "2c70ea92-c8bd-4b11-8757-c99906d919be",
+        "deployment": "b5c05fd5-f210-47f2-a358-27d6683e8ed4",
+        "modelhidden": "2c70ea92-c8bd-4b11-8757-c99906d919be",
+        "deploymenthidden": "",
+        "x": 433,
+        "y": 426,
+        "wires": [
+            [
+                "d7673320.70db5"
+            ]
+        ]
+    },
+    {
+        "id": "d7673320.70db5",
+        "type": "link out",
+        "z": "aee48a74.f0d118",
+        "name": "",
+        "links": [
+            "6e90883f.1a9bf8"
+        ],
+        "x": 603,
+        "y": 426,
+        "wires": []
+    },
+    {
+        "id": "798bcb89.a8d2e4",
+        "type": "comment",
+        "z": "aee48a74.f0d118",
+        "name": "Scoring - Prediction",
+        "info": "",
+        "x": 224,
+        "y": 473,
+        "wires": []
+    },
+    {
+        "id": "eeecb149.d22378",
+        "type": "function",
+        "z": "aee48a74.f0d118",
+        "name": "Build Payload Values",
+        "func": "msg.payload = {\"input_data\":[{\n          \n  \"fields\": [\"Country\", \"Year\", \"Status\", \"Adult Mortality\", \"infant deaths\", \"Alcohol\", \"percentage expenditure\", \"Hepatitis B\", \"Measles\", \"BMI\", \"under-five deaths\", \"Polio\", \"Total expenditure\", \"Diphtheria\", \"HIV/AIDS\", \"GDP\", \"Population\", \"thinness  1-19 years\", \"thinness 5-9 years\", \"Income composition of resources\", \"Schooling\"],\n  \"values\": [\n  [\"Afghanistan\",2015,\"Developing\",263,62,0.01,71.27962362,65,1154,19.1,83,6,8.16,65,0.1,584.25921,33736494,17.2,17.3,0.479,10.1  ],\n  [\"Afghanistan\",2014,\"Developing\",271,64,0.01,73.52358168,62,492,18.6,86,58,8.18,62,0.1,612.696514,327582,17.5,17.5,0.476,10  ],\n  [\"Afghanistan\",2013,\"Developing\",268,66,0.01,73.21924272,64,430,18.1,89,62,8.13,64,0.1,631.744976,31731688,17.7,17.7,0.47,9.9  ],\n  [\"Afghanistan\",2012,\"Developing\",272,69,0.01,78.1842153,67,2787,17.6,93,67,8.52,67,0.1,669.959,3696958,17.9,18,0.463,9.8  ],\n  [\"Afghanistan\",2011,\"Developing\",275,71,0.01,7.097108703,68,3013,17.2,97,68,7.87,68,0.1,63.537231,2978599,18.2,18.2,0.454,9.5  ],\n  [\"Afghanistan\",2010,\"Developing\",279,74,0.01,79.67936736,66,1989,16.7,102,66,9.2,66,0.1,553.32894,2883167,18.4,18.4,0.448,9.2  ],\n  [\"Afghanistan\",2009,\"Developing\",281,77,0.01,56.76221682,63,2861,16.2,106,63,9.42,63,0.1,445.8932979,284331,18.6,18.7,0.434,8.9  ],\n  [\"Afghanistan\",2008,\"Developing\",287,80,0.03,25.87392536,64,1599,15.7,110,64,8.33,64,0.1,373.3611163,2729431,18.8,18.9,0.433,8.7  ],\n  [\"Afghanistan\",2007,\"Developing\",295,82,0.02,10.91015598,63,1141,15.2,113,63,6.73,63,0.1,369.835796,26616792,19,19.1,0.415,8.4  ],\n  [\"Afghanistan\",2006,\"Developing\",295,84,0.03,17.17151751,64,1990,14.7,116,58,7.43,58,0.1,272.56377,2589345,19.2,19.3,0.405,8.1  ],\n  [\"Afghanistan\",2005,\"Developing\",291,85,0.02,1.388647732,66,1296,14.2,118,58,8.7,58,0.1,25.2941299,257798,19.3,19.5,0.396,7.9  ],\n  [\"Afghanistan\",2004,\"Developing\",293,87,0.02,15.29606643,67,466,13.8,120,5,8.79,5,0.1,219.1413528,24118979,19.5,19.7,0.381,6.8  ],\n  [\"Afghanistan\",2003,\"Developing\",295,87,0.01,11.08905273,65,798,13.4,122,41,8.82,41,0.1,198.7285436,2364851,19.7,19.9,0.373,6.5  ],\n  [\"Afghanistan\",2002,\"Developing\",3,88,0.01,16.88735091,64,2486,13,122,36,7.76,36,0.1,187.84595,21979923,19.9,2.2,0.341,6.2  ],\n  [\"Afghanistan\",2001,\"Developing\",316,88,0.01,10.5747282,63,8762,12.6,122,35,7.8,33,0.1,117.49698,2966463,2.1,2.4,0.34,5.9  ]]\n}]}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 402,
+        "y": 519,
+        "wires": [
+            [
+                "770872fb.d393f4"
+            ]
+        ]
+    },
+    {
+        "id": "6a8fe181.5fb378",
+        "type": "wml-config",
+        "z": "",
+        "host": "https://eu-gb.ml.cloud.ibm.com",
+        "instanceid": "84ae14d8-4ff0-4b7f-86b1-d001f6dfc88f",
+        "name": "Initial"
+    }
+]
